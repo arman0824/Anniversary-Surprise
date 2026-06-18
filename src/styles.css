@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Playfair+Display:wght@700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #3a2430;
+  background: #fafafa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.heart-lock::before,
+.heart-lock::after {
+  position: absolute;
+  content: "";
+  border-radius: 999px;
+  background: rgba(255, 105, 180, 0.12);
+  filter: blur(18px);
+}
+
+.heart-lock::before {
+  inset: 8px;
+}
+
+.heart-lock::after {
+  inset: 36px;
+  background: rgba(217, 198, 255, 0.22);
+}
+
+.scroll-fade {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 20, 147, 0.35) rgba(255, 240, 245, 0.8);
+}
+
+.scroll-fade::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-fade::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(255, 240, 245, 0.8);
+}
+
+.scroll-fade::-webkit-scrollbar-thumb {
+  border: 3px solid rgba(255, 240, 245, 0.9);
+  border-radius: 999px;
+  background: rgba(255, 20, 147, 0.42);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
